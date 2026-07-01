@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="newd.css">
 </head>
+
 <body>
 
     <div class="main">
@@ -13,5 +15,34 @@
     </div>
     <img src="public/pass3.png" alt="" srcset="">
     <img src="public/pass-full.png" alt="" srcset="">
+
+    <div class="time-container">
+        <div class="date-display" id="current-date">28-06-2026</div>
+        <div class="clock-display" id="current-time">17:02:46</div>
+    </div>
+    <!-- Footer Action -->
+    <div class="footer-action">
+    </div>
+    <script>
+        function updateClock() {
+            const now = new Date();
+
+            // Date formatting DD-MM-YYYY
+            const day = String(now.getDate()).padStart(2, '0');
+            const month = String(now.getMonth() + 1).padStart(2, '0');
+            const year = now.getFullYear();
+            document.getElementById('current-date').textContent = `${day}-${month}-${year}`;
+
+            // Time formatting HH:MM:SS
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            document.getElementById('current-time').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call
+    </script>
 </body>
+
 </html>
