@@ -45,17 +45,18 @@ img {
     font-family: "Quicksand", sans-serif;
     position: absolute;
     justify-items: center;
-    bottom: 11.5%;
+    bottom: 5.75%;
     color: #2D386B;
+    filter: blur(1px);
     
 }
 
 .date-display{
     font-weight: 700;
-    font-size: 32px;
+    font-size: 16px;
 }
 
 .clock-display{
     font-weight: 700;
-    font-size: 80px;
+    font-size: 40px;
 }
